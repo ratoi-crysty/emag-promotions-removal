@@ -27,7 +27,7 @@ const manifest = deepmerge(
     name: '__MSG_extensionName__',
     version: packageJson.version,
     description: '__MSG_extensionDescription__',
-    host_permissions: ['<all_urls>'],
+    host_permissions: ['https://www.emag.ro/*'],
     permissions: ['storage', 'scripting', 'tabs', 'notifications'],
     options_page: 'options/index.html',
     background: {
@@ -43,15 +43,15 @@ const manifest = deepmerge(
     },
     content_scripts: [
       {
-        matches: ['http://*/*', 'https://*/*', '<all_urls>'],
+        matches: ['https://www.emag.ro/*'],
         js: ['content/index.iife.js'],
       },
+      // {
+      //   matches: ['http://*/*', 'https://*/*', '<all_urls>'],
+      //   js: ['content-ui/index.iife.js'],
+      // },
       {
-        matches: ['http://*/*', 'https://*/*', '<all_urls>'],
-        js: ['content-ui/index.iife.js'],
-      },
-      {
-        matches: ['http://*/*', 'https://*/*', '<all_urls>'],
+        matches: ['https://www.emag.ro/*'],
         css: ['content.css'], // public folder
       },
     ],

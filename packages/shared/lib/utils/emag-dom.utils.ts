@@ -9,9 +9,15 @@ export function getProductsContainer(): JQuery {
 }
 
 export function listenToProductsContainer(listener: MutationCallback) {
+  const container: HTMLElement | undefined = getProductsContainer()[0];
+
+  if (!container) {
+    return;
+  }
+
   const observer = new MutationObserver(listener);
 
-  observer.observe(getProductsContainer()[0], {
+  observer.observe(container, {
     subtree: true,
     childList: true,
   });
