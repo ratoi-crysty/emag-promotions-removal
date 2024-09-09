@@ -1,6 +1,6 @@
 {
   "name": "emag-promotions-removal",
-  "version": "v0.0.0-alpha",
+  "version": "0.0.0",
   "description": "Remove annoying promotions from eMag store",
   "license": "MIT",
   "repository": {
