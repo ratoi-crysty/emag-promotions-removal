@@ -1,6 +1,15 @@
-import { listenToProductsContainer, removePromoted } from '@extension/shared';
+import { listenToProductsContainer, hidePromoted } from '@extension/shared';
+import { enabledStorage } from '@extension/storage';
 
-removePromoted();
-listenToProductsContainer(() => {
-  removePromoted();
+let unsubscribe: (() => void) | undefined;
+
+enabledStorage.subscribe(() => {
+  if (enabledStorage.getSnapshot()) {
+    hidePromoted();
+    unsubscribe = listenToProductsContainer(() => {
+      hidePromoted();
+    });
+  } else {
+    unsubscribe?.();
+  }
 });

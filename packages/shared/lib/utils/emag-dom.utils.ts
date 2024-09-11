@@ -8,11 +8,11 @@ export function getProductsContainer(): JQuery {
   return $('.js-products-container');
 }
 
-export function listenToProductsContainer(listener: MutationCallback) {
+export function listenToProductsContainer(listener: MutationCallback): () => void {
   const container: HTMLElement | undefined = getProductsContainer()[0];
 
   if (!container) {
-    return;
+    return () => undefined;
   }
 
   const observer = new MutationObserver(listener);
@@ -21,8 +21,12 @@ export function listenToProductsContainer(listener: MutationCallback) {
     subtree: true,
     childList: true,
   });
+
+  return () => {
+    observer.disconnect();
+  };
 }
 
-export function removePromoted(): void {
-  getPromotedProducts().remove();
+export function hidePromoted(): void {
+  getPromotedProducts().css({ display: 'none' });
 }

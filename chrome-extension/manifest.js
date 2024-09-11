@@ -36,10 +36,11 @@ const manifest = deepmerge(
     },
     action: {
       default_popup: 'popup/index.html',
-      default_icon: 'icon-34.png',
+      default_icon: 'icon-40.png',
     },
     icons: {
       128: 'icon-128.png',
+      300: 'icon-512.png',
     },
     content_scripts: [
       {
@@ -55,10 +56,10 @@ const manifest = deepmerge(
         css: ['content.css'], // public folder
       },
     ],
-    devtools_page: 'devtools/index.html',
+    // devtools_page: 'devtools/index.html',
     web_accessible_resources: [
       {
-        resources: ['*.js', '*.css', '*.svg', 'icon-128.png', 'icon-34.png'],
+        resources: ['*.js', '*.css', '*.svg', 'icon-512.png', 'icon-128.png', 'icon-40.png'],
         matches: ['*://*/*'],
       },
     ],

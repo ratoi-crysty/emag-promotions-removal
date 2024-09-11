@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import '@src/index.css';
-import Popup from '@src/Popup';
+import Popup from '@src/components/popup/popup';
 
 function init() {
   const appContainer = document.querySelector('#app-container');
