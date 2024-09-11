@@ -1,6 +1,6 @@
 # eMag promotions removal
 
-## Remove annoYng products promotions
+## Remove annoying products promotions
 
 ### Installation
 
