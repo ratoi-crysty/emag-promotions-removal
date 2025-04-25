@@ -9,7 +9,6 @@
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -17,10 +16,10 @@
     "resolveJsonModule": true,
     "noImplicitReturns": true,
     "jsx": "react-jsx",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ]
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "types": ["node", "chrome"]
   }
 }
-

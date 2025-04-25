@@ -1,4 +1,4 @@
-import type { BUILD_COMPLETE, DO_UPDATE, DONE_UPDATE } from './constant';
+import type { BUILD_COMPLETE, DO_UPDATE, DONE_UPDATE } from './consts.js';
 
 type UpdateRequestMessage = {
   type: typeof DO_UPDATE;
@@ -16,4 +16,5 @@ export type PluginConfig = {
   onStart?: () => void;
   reload?: boolean;
   refresh?: boolean;
+  id?: string;
 };

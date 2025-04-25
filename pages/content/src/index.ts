@@ -3,6 +3,8 @@ import { enabledStorage } from '@extension/storage';
 
 let unsubscribe: (() => void) | undefined;
 
+console.log('Content');
+
 enabledStorage.subscribe(() => {
   if (enabledStorage.getSnapshot()) {
     hidePromoted();

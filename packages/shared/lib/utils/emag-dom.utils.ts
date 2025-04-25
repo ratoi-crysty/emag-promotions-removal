@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export function getPromotedProducts(): JQuery {
-  return $('.extra-badge-promo').parents('.js-product-data').remove();
+  return $('.card-v2-badge-cmp.badge.bg-light.bg-opacity-90.text-neutral-darkest').parents('.js-product-data').remove();
 }
 
 export function getProductsContainer(): JQuery {
