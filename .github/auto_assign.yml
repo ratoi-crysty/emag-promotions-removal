@@ -1,8 +1,7 @@
 addReviewers: true
 
 reviewers:
-  - Jonghakseo
-  - PatrykKuniczak
+  - ratoi-crysty
 
 addAssignees: author
 
